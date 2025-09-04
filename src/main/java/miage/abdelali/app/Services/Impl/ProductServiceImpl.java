@@ -41,4 +41,14 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> findAll() {
 		return repo.findAll();
 	}
+
+	@Override
+	public Product save(Product product) {
+		return repo.save(product);
+	}
+
+	@Override
+	public void delete(Long id) {
+		repo.deleteById(id);
+	}
 }

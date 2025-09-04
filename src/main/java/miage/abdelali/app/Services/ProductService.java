@@ -9,4 +9,8 @@ public interface ProductService {
 	Product create(String code, String label);
 
 	List<Product> findAll();
+
+	Product save(Product product);
+
+	void delete(Long id);
 }
