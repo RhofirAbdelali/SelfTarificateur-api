@@ -4,18 +4,23 @@ import java.math.BigDecimal;
 import jakarta.validation.constraints.*;
 
 public class DevisRequestDto {
-	@NotBlank
+	@NotBlank(message = "productCode obligatoire")
 	private String productCode;
-	@NotBlank
+
+	@NotBlank(message = "versionCode obligatoire")
 	private String versionCode;
-	@NotBlank
+
+	@NotBlank(message = "birthDate obligatoire")
 	private String birthDate;
-	@NotNull
-	@Positive
+
+	@NotNull(message = "capital obligatoire")
+	@Positive(message = "capital doit être > 0")
 	private BigDecimal capital;
-	@NotBlank
+
+	@NotBlank(message = "smoker obligatoire (OUI/NON)")
 	private String smoker;
-	@Size(max = 30)
+
+	@Size(max = 30, message = "professionCategory max 30")
 	private String professionCategory;
 
 	public String getProductCode() {
