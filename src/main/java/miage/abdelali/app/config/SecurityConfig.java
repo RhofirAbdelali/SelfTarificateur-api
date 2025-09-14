@@ -84,7 +84,7 @@ public class SecurityConfig {
   @Bean
   public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration cfg = new CorsConfiguration();
-    cfg.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000"));
+    cfg.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000", "https://www.selftarificateur.fr", "https://selftarificateur.fr"));
     cfg.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
     cfg.setAllowedHeaders(List.of("*"));
     cfg.setAllowCredentials(true);
